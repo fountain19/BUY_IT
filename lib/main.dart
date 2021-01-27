@@ -55,6 +55,7 @@ class StoreApp extends StatelessWidget {
         if(!snapshot.hasData){
           return MaterialApp(home: Scaffold(
             body: Center(child: Text('Loading....'),),
+
           ));
         }else{
           isUserLoggedIn=snapshot.data.getBool(KKeepMeLoggedIn)??false  ;
@@ -72,6 +73,7 @@ class StoreApp extends StatelessWidget {
                   create: (context)=> CartItem()),
             ],
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
               initialRoute:
 
                isUserLoggedIn? HomePage.id:LoginScreen.id,
