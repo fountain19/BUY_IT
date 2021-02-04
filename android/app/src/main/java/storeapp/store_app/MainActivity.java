@@ -1,4 +1,4 @@
-package storeapp.store_app;
+package com.Aslan.Buyit;
 
 import io.flutter.embedding.android.FlutterActivity;
 

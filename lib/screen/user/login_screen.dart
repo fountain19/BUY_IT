@@ -131,25 +131,25 @@ bool keepMeLoggedIn=false;
                 ),
               ),
               SizedBox(height: height * 0.03),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 30,right: 30),
-              //   child:
-              //   ButtonTheme(
-              //     buttonColor: Colors.green,
-              //     child: RaisedButton(
-              //       child: Text('Sign In with Google',style: TextStyle(
-              //         color: Colors.white
-              //       ),),
-              //       onPressed: ()async{
-              //
-              //      await signInWithGoogle();
-              //       },
-              //     ),
-              //
-              //   ),
-              //
-              // ),
-              // SizedBox(height: height * 0.03),
+              Padding(
+                padding: const EdgeInsets.only(left: 30,right: 30),
+                child:
+                ButtonTheme(
+                  buttonColor: Colors.green,
+                  child: RaisedButton(
+                    child: Text('Sign In with Google',style: TextStyle(
+                      color: Colors.white
+                    ),),
+                    onPressed: ()async{
+
+                   await signInWithGoogle();
+                    },
+                  ),
+
+                ),
+
+              ),
+              SizedBox(height: height * 0.03),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
