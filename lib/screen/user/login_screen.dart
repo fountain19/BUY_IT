@@ -131,25 +131,25 @@ bool keepMeLoggedIn=false;
                 ),
               ),
               SizedBox(height: height * 0.03),
-              Padding(
-                padding: const EdgeInsets.only(left: 30,right: 30),
-                child:
-                ButtonTheme(
-                  buttonColor: Colors.green,
-                  child: RaisedButton(
-                    child: Text('Sign In with Google',style: TextStyle(
-                      color: Colors.white
-                    ),),
-                    onPressed: ()async{
-
-                   await signInWithGoogle();
-                    },
-                  ),
-
-                ),
-
-              ),
-              SizedBox(height: height * 0.03),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 30,right: 30),
+              //   child:
+              //   ButtonTheme(
+              //     buttonColor: Colors.green,
+              //     child: RaisedButton(
+              //       child: Text('Sign In with Google',style: TextStyle(
+              //         color: Colors.white
+              //       ),),
+              //       onPressed: ()async{
+              //
+              //      await signInWithGoogle();
+              //       },
+              //     ),
+              //
+              //   ),
+              //
+              // ),
+              // SizedBox(height: height * 0.03),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -262,38 +262,38 @@ bool keepMeLoggedIn=false;
     preferences.setBool(KKeepMeLoggedIn, keepMeLoggedIn);
   }
 
-  Future<void> signInWithGoogle() async{
-    final modelHud = Provider.of<ModalHud>(context, listen: false);
-    modelHud.changeisLoading(true);
-    GoogleSignInAccount googleSignInAccount=await _googleSignIn.signIn();
-    GoogleSignInAuthentication googleSignInAuthentication=await googleSignInAccount.authentication;
-   AuthCredential authCredential= GoogleAuthProvider.getCredential(idToken: googleSignInAuthentication.idToken, accessToken: googleSignInAuthentication.accessToken);
-    AuthResult authResult=await auth.signInWithCredential(authCredential);
-    FirebaseUser user=authResult.user;
-    modelHud.changeisLoading(false);
-
-    Firestore.instance.collection(KAuthCollection).document(user.uid).setData({
-      KUid: user.uid,
-      KName: user.displayName,
-      KEmail: user.email,
-      KUrl: user.photoUrl,
-      KuserCartList: ["garbageValue"],
-    });
-    await Buy.sharedPreferences.setString(KUid, user.uid);
-    await Buy.sharedPreferences.setString(KEmail, user.email);
-    await Buy.sharedPreferences.setString(KUrl, user.photoUrl);
-    await Buy.sharedPreferences.setString(
-      KName,
-      user.displayName,
-    );
-    await Buy.sharedPreferences.setStringList(KuserCartList, ["garbageValue"]);
-
-
-    Navigator.pushNamed(context,HomePage.id,arguments:
-     // '${authResult.user}'
-'${user.email}'
-    );
-  }
+//   Future<void> signInWithGoogle() async{
+//     final modelHud = Provider.of<ModalHud>(context, listen: false);
+//     modelHud.changeisLoading(true);
+//     GoogleSignInAccount googleSignInAccount=await _googleSignIn.signIn();
+//     GoogleSignInAuthentication googleSignInAuthentication=await googleSignInAccount.authentication;
+//    AuthCredential authCredential= GoogleAuthProvider.getCredential(idToken: googleSignInAuthentication.idToken, accessToken: googleSignInAuthentication.accessToken);
+//     AuthResult authResult=await auth.signInWithCredential(authCredential);
+//     FirebaseUser user=authResult.user;
+//     modelHud.changeisLoading(false);
+//
+//     Firestore.instance.collection(KAuthCollection).document(user.uid).setData({
+//       KUid: user.uid,
+//       KName: user.displayName,
+//       KEmail: user.email,
+//       KUrl: user.photoUrl,
+//       KuserCartList: ["garbageValue"],
+//     });
+//     await Buy.sharedPreferences.setString(KUid, user.uid);
+//     await Buy.sharedPreferences.setString(KEmail, user.email);
+//     await Buy.sharedPreferences.setString(KUrl, user.photoUrl);
+//     await Buy.sharedPreferences.setString(
+//       KName,
+//       user.displayName,
+//     );
+//     await Buy.sharedPreferences.setStringList(KuserCartList, ["garbageValue"]);
+//
+//
+//     Navigator.pushNamed(context,HomePage.id,arguments:
+//      // '${authResult.user}'
+// '${user.email}'
+//     );
+//   }
 
   Future readData(FirebaseUser fUser) async {
 
