@@ -7,14 +7,17 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         appBar: AppBar(
-          backgroundColor: KmainColor,
+          backgroundColor: Color(0xFF2c425e),
           elevation: 0.0,
           title: Text('About Us'),
         ),
         body: Stack(
+
           children: <Widget>[
             Column(
+
                mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                  Padding(
@@ -43,7 +46,7 @@ class AboutUs extends StatelessWidget {
               ],
             ),
             Material(
-              color: KmainColor,
+              color: Color(0xFF2c425e),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(20, 30, 20, 100),
                 child: Container(

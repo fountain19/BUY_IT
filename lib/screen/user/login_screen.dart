@@ -53,10 +53,11 @@ bool keepMeLoggedIn=false;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: KmainColor,
+          automaticallyImplyLeading: false,
+        backgroundColor: Color(0xFF728290),
         elevation: 0.0,
       ),
-      backgroundColor: KmainColor,
+      backgroundColor: Color(0xFF728290),
       body: ModalProgressHUD(
         inAsyncCall:
 
@@ -114,7 +115,7 @@ bool keepMeLoggedIn=false;
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    color: Colors.deepOrange,
+                    color: Color(0xFF2c425e),
                     onPressed: () {
                       if(keepMeLoggedIn==true)
                         {
@@ -174,6 +175,7 @@ bool keepMeLoggedIn=false;
                   ),
                 ],
               ),
+              SizedBox(height: 10.0,),
               Row(
                 children: <Widget>[
                   Expanded(
@@ -187,7 +189,7 @@ bool keepMeLoggedIn=false;
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Provider.of<AdminMode>(context).isAdmin
-                              ? KmainColor
+                              ? Color(0xFF728290)
                               : Colors.white),
                     ),
                   )),
@@ -202,7 +204,7 @@ bool keepMeLoggedIn=false;
                           style: TextStyle(
                               color: Provider.of<AdminMode>(context).isAdmin
                                   ? Colors.white
-                                  : KmainColor)),
+                                  : Color(0xFF728290))),
                     ),
                   ),
                 ],
@@ -244,6 +246,7 @@ bool keepMeLoggedIn=false;
           modelHud.changeisLoading(false);
           await _auth.signIn(_email.trim(), password.trim()) .then((authUser) {
             firebaseUser = authUser.user;
+
           });
           // Navigator.pushNamed(context, HomePage.id);
           Navigator.pushNamed(context, HomePage.id,arguments: _email);
@@ -303,13 +306,13 @@ bool keepMeLoggedIn=false;
         .get()
         .then((dataSnapshot) async {
       await Buy.sharedPreferences
-          .setString('uid', dataSnapshot.data[KUid]);
+          .setString('Uid', dataSnapshot.data[KUid]);
       await Buy.sharedPreferences
-          .setString('name', dataSnapshot.data[KName]);
+          .setString('Name', dataSnapshot.data[KName]);
       await Buy.sharedPreferences
-          .setString('email', dataSnapshot.data[KEmail]);
+          .setString('Email', dataSnapshot.data[KEmail]);
       await Buy.sharedPreferences
-          .setString('url', dataSnapshot.data[KUrl]);
+          .setString('Url image', dataSnapshot.data[KUrl]);
       List<String> cartList = dataSnapshot.data[KuserCartList].cast<String>();
       await Buy.sharedPreferences
           .setStringList(KuserCartList, cartList);

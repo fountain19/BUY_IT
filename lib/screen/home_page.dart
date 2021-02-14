@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               type: BottomNavigationBarType.fixed,
               unselectedItemColor: KUnActiveColor,
               currentIndex: _bottomBarIndex,
-              fixedColor: KmainColor,
+              fixedColor: Color(0xFF2c425e),
               onTap: (value) async {
                 if (value == 2) {
                   SharedPreferences pref =
@@ -71,9 +71,9 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(
                       context, Setting.id, arguments: checkEmail(_email, user));
                  }
-                  // else if (value == 1) {
-                //   Navigator.pushNamed(context, CartScreen.id);
-                // }
+                  else if (value == 1) {
+                  Navigator.pushNamed(context, CartScreen.id);
+                }
 
                 setState(() {
                   _bottomBarIndex = value;
@@ -83,9 +83,9 @@ class _HomePageState extends State<HomePage> {
                 BottomNavigationBarItem(
                     title: Text('Setting'), icon: Icon(Icons.settings,size: 25,)),
                 BottomNavigationBarItem(
-                    title: Text('Test'),
+                    title: Text('Cart screen'),
                     icon:
-                    Icon(Icons.person)),
+                    Icon(Icons.shopping_cart)),
                 BottomNavigationBarItem(
                     title: Text('Sign Out'), icon: Icon(Icons.close)),
               ],
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         Material(
-          color: Colors.pink,
+          color: Color(0xFF2c425e),
           child: Padding(
             padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
             child: Container(
@@ -161,24 +161,24 @@ class _HomePageState extends State<HomePage> {
                         'Discover'.toUpperCase(),
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ),
-                        Stack(
-
-                        alignment: Alignment.topLeft,
-                        children: <Widget>[
-
-                          IconButton(
-                            onPressed: () { Navigator.pushNamed(context, CartScreen.id); },
-                            icon: Icon(Icons.shopping_cart,size: 35,color: Colors.black,)),
-
-                            CircleAvatar(
-                              backgroundColor: Colors.pink,
-                                radius: 10,
-                                child:Text('0',style: TextStyle(
-                                  color: Colors.white
-                                ),) ,)
-                        ],
-
-              ),
+              //           Stack(
+              //
+              //           alignment: Alignment.topLeft,
+              //           children: <Widget>[
+              //
+              //             IconButton(
+              //               onPressed: () { Navigator.pushNamed(context, CartScreen.id); },
+              //               icon: Icon(Icons.shopping_cart,size: 35,color: Colors.black,)),
+              //
+              //               CircleAvatar(
+              //                 backgroundColor: Colors.pink,
+              //                   radius: 10,
+              //                   child:Text('0',style: TextStyle(
+              //                     color: Colors.white
+              //                   ),) ,)
+              //           ],
+              //
+              // ),
              ],
             ),
           ),

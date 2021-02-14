@@ -27,6 +27,7 @@ class _SettingState extends State<Setting>{
 
 
 
+
   @override
   Widget build(BuildContext context) {
    // String _email=ModalRoute.of(context).settings.arguments;
@@ -35,7 +36,7 @@ class _SettingState extends State<Setting>{
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: KmainColor,
+        backgroundColor: Color(0xFF2c425e),
         title: Text('Setting',),
         centerTitle: true,
       ),
@@ -45,20 +46,21 @@ class _SettingState extends State<Setting>{
             children: <Widget>[
               UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
-                    color: KmainColor
+                    color: Color(0xFF2c425e)
                 ),
-                currentAccountPicture: CircleAvatar(
-                  radius: 25,
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage(
-                      Buy.sharedPreferences.getString(KUrl)),
-                ),
-
-                accountName: Text(
-                          Buy.sharedPreferences.getString(KName)),
-
-                      accountEmail: Text(
-                          Buy.sharedPreferences.getString(KEmail)),
+                // currentAccountPicture: CircleAvatar(
+                //   radius: 25,
+                //   backgroundColor: Colors.white,
+                //   backgroundImage:Buy.sharedPreferences.getString(KUrl)!=null?
+                //   NetworkImage(
+                //       Buy.sharedPreferences.getString(KUrl),):AssetImage('')
+                // ),
+                //
+                // accountName:Buy.sharedPreferences.getString(KName)!=null? Text(
+                //           Buy.sharedPreferences.getString(KName)):Text(''),
+                //
+                //       accountEmail: Buy.sharedPreferences.getString(KEmail)!=null?Text(
+                //           Buy.sharedPreferences.getString(KEmail)):Text(''),
               ),
                  ListTile(
                     onTap: () {

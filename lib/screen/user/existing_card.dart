@@ -59,7 +59,7 @@ class _ExistingCardState extends State<ExistingCard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: KmainColor,
+        backgroundColor: Color(0xFF2c425e),
         title: Text('Choose your card'),
       ),
       body: Container(

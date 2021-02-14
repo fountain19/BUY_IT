@@ -31,7 +31,7 @@ class _CartScreenState extends State<Favorite> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        backgroundColor: KmainColor,
+        backgroundColor: Color(0xFF2c425e),
         centerTitle: true,
         title: Text(
           'My favorite',

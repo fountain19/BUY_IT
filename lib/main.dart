@@ -34,13 +34,13 @@ import 'screen/user/login_screen.dart';
 
 void main()async {
 
-  runApp(StoreApp());
+  runApp(BuyIt());
   WidgetsFlutterBinding.ensureInitialized();
   Buy.auth= FirebaseAuth.instance;
   Buy.firestore=Firestore.instance;
   Buy.sharedPreferences=await SharedPreferences.getInstance();
 }
-class StoreApp extends StatelessWidget {
+class BuyIt extends StatelessWidget {
 
 
   bool isUserLoggedIn=false;

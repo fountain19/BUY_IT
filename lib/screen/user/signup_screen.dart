@@ -47,7 +47,7 @@ class _SignupScreenState extends State<SignupScreen> {
         .size
         .height;
     return Scaffold(
-      backgroundColor: KmainColor,
+      backgroundColor: Color(0xFF2c425e),
       body: ModalProgressHUD(
         inAsyncCall: Provider
             .of<ModalHud>(context)
@@ -121,7 +121,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
-                        color: Colors.deepOrange,
+                        color: Color(0xFFfcbb6c),
                         onPressed: () async {
                           final modalHud =
                           Provider.of<ModalHud>(context, listen: false);

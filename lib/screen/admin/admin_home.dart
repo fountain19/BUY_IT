@@ -11,7 +11,7 @@ class AdminHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: KmainColor,
+    return Scaffold(backgroundColor: Color(0xFF2c425e),
       body: Column(
 
         mainAxisAlignment: MainAxisAlignment.center,

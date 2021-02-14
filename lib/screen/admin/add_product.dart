@@ -53,7 +53,7 @@ return dropdownItem;
       key: scaffoldKey,
       appBar: AppBar(
 
-        backgroundColor: KmainColor,
+        backgroundColor: Color(0xFF2c425e),
         elevation: 0.0,
         actions: <Widget>[
           Padding(
@@ -70,7 +70,7 @@ return dropdownItem;
                 'Add Image',
                 style: TextStyle(color: Colors.white),
               ),
-              color: Colors.green,
+              color: Color(0xFFfcbb6c),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(15.0),
@@ -80,7 +80,7 @@ return dropdownItem;
           ),
         ],
       ),
-      backgroundColor: KmainColor,
+      backgroundColor: Color(0xFF2c425e),
       body:
       ListView(
         children: <Widget>[
@@ -138,7 +138,7 @@ return dropdownItem;
 
               SizedBox(height: 20,),
               RaisedButton(
-                color: Colors.deepOrangeAccent,
+                color: Color(0xFFebb775),
                 onPressed: () async{
                 // if (_globalKey.currentState.validate()) {
                   // _globalKey.currentState.save();

@@ -110,7 +110,7 @@ class _ProductInfoState extends State<ProductInfo> {
                                    children: <Widget>[
                                      ClipOval(
                                        child: Material(
-                                         color: KmainColor,
+                                         color: Color(0xFFfcbb6c),
                                          child: GestureDetector(
                                            onTap: add,
                                            child: SizedBox(child: Icon(Icons.add),
@@ -122,7 +122,7 @@ class _ProductInfoState extends State<ProductInfo> {
                                        style: TextStyle(fontSize: 50),),
                                      ClipOval(
                                        child: Material(
-                                         color: KmainColor,
+                                         color: Color(0xFFfcbb6c),
                                          child: GestureDetector(
                                            onTap: subtract,
                                            child: SizedBox(child: Icon(Icons.remove),
@@ -155,7 +155,7 @@ class _ProductInfoState extends State<ProductInfo> {
                             style: TextStyle(fontWeight: FontWeight.bold,
                                 fontSize: 25),
                           ),
-                          color: KmainColor,
+                          color: Color(0xFFfcbb6c),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(20),
