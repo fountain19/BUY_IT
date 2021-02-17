@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                                 addToFavorite(context, products[index]);
                               },
                               child: Icon(Icons.favorite, color: Colors.red,
-                                size: 50,)),
+                                size: 35,)),
                         ),
                         Positioned(
                           bottom: 0,
@@ -348,7 +348,7 @@ class _HomePageState extends State<HomePage> {
                                 addToFavorite(context, products[index]);
                               },
                               child: Icon(Icons.favorite, color: Colors.red,
-                                size: 50,)),
+                                size: 35,)),
                         ),
                         Positioned(
                             bottom: 0,
@@ -454,7 +454,7 @@ class _HomePageState extends State<HomePage> {
                                 addToFavorite(context, products[index]);
                               },
                               child: Icon(Icons.favorite, color: Colors.red,
-                                size: 50,)),
+                                size: 35,)),
                         ),
                         Positioned(
                             bottom: 0,
@@ -559,7 +559,7 @@ class _HomePageState extends State<HomePage> {
                                 addToFavorite(context, products[index]);
                               },
                               child: Icon(Icons.favorite, color: Colors.red,
-                                size: 50,)),
+                                size: 35,)),
                         ),
                         Positioned(
                             bottom: 0,

@@ -10,7 +10,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="store_app"
+        android:label="Buy it"
         android:icon="@mipmap/launcher_icon">
 
         <meta-data android:name="com.google.android.geo.API_KEY"
@@ -40,7 +40,7 @@
                  Flutter's first frame. -->
             <meta-data
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
-              android:resource="@drawable/splash"
+              android:resource="@drawable/launch_background"
               />
             <intent-filter>
                 <action android:name="FLUTTER_NOTIFICATION_CLICK" />
